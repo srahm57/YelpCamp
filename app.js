@@ -14,13 +14,14 @@ var campgroundsRoute    = require("./routes/campgrounds"),
 
 const PORT  = process.env.PORT || 3000;
 const IP    = process.env.IP || "localhost";
-
+var url = "mongodb+srv://saif:ads$poi@cluster0-vofit.mongodb.net/test?retryWrites=true&w=majority";
+// "mongodb://localhost:27017/yelp_camp"
 var app = express();
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+"/public"));
-mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true});
+mongoose.connect(url, {useNewUrlParser: true});
 app.use(methodOverride("_method"));
 app.use(flash());
 
