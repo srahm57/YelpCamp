@@ -14,7 +14,7 @@ var campgroundsRoute    = require("./routes/campgrounds"),
 
 const PORT  = process.env.PORT || 3000;
 const IP    = process.env.IP || "localhost";
-var url = "mongodb+srv://saif:ads$poi@cluster0-vofit.mongodb.net/test?retryWrites=true&w=majority";
+var url = "mongodb+srv://saif:ads%24poi@cluster0-vofit.mongodb.net/test?retryWrites=true&w=majority";
 // "mongodb://localhost:27017/yelp_camp"
 var app = express();
 
