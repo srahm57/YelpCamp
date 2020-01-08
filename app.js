@@ -12,6 +12,9 @@ var campgroundsRoute    = require("./routes/campgrounds"),
     commentsRoute       = require("./routes/comments"),
     indexRoute          = require("./routes/index");
 
+const PORT  = process.env.PORT || 3000;
+const IP    = process.env.IP || "localhost";
+
 var app = express();
 
 app.set("view engine", "ejs");
@@ -47,6 +50,6 @@ app.use("/campground", campgroundsRoute);
 app.use("/campground/:id/comment", commentsRoute);
 app.use("/", indexRoute);
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(PORT, IP, function(){
     console.log("Yelpcamp Project started");
 });
