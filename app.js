@@ -13,8 +13,8 @@ var campgroundsRoute    = require("./routes/campgrounds"),
     indexRoute          = require("./routes/index");
 
 const PORT  = process.env.PORT || 3000;
-const IP    = process.env.IP || "localhost";
-var url = "mongodb+srv://saif:ads%24poi@cluster0-qmby9.mongodb.net/test?retryWrites=true&w=majority";
+//const IP    = process.env.IP || "localhost";
+var url = "mongodb+srv://saif:adspoi123@yelp-cluster-zhbks.mongodb.net/test?retryWrites=true&w=majority";
 // var url = "mongodb+srv://saif:ads%24poi@cluster0-vofit.mongodb.net/test?retryWrites=true&w=majority";
 // "mongodb://localhost:27017/yelp_camp"
 var app = express();
@@ -52,6 +52,6 @@ app.use("/campground", campgroundsRoute);
 app.use("/campground/:id/comment", commentsRoute);
 app.use("/", indexRoute);
 
-app.listen(PORT, IP, function(){
+app.listen(PORT, function(){
     console.log("Yelpcamp Project started");
 });
